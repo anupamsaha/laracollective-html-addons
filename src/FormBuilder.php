@@ -4,6 +4,7 @@ namespace AnupamSaha\LaravelExtra\Html;
 
 use Exception;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Collective\Html\FormBuilder as BaseFormBuilder;
 use AnupamSaha\LaravelExtra\Html\Exceptions\EncryptException;
@@ -74,10 +75,10 @@ class FormBuilder extends BaseFormBuilder
      */
     public function __construct(HtmlBuilder $html, UrlGenerator $url, $csrfToken)
     {
-        $this->formProtectKey = config('htmlprotector.form_protect_key', '__protect');
-        $this->hiddenProtector = config('htmlprotector.hidden_protector', '__data');
-        $this->segmentKey = config('htmlprotector.segment_key', 'segements');
-        $this->tsKey = config('htmlprotector.timestamp_key', '__tx');
+        $this->formProtectKey = Config::get('htmladdons.form_protect_key', '__protect');
+        $this->hiddenProtector = Config::get('htmladdons.hidden_protector', '__data');
+        $this->segmentKey = Config::get('htmladdons.segment_key', 'segements');
+        $this->tsKey = Config::get('htmladdons.timestamp_key', '__tx');
 
         parent::__construct($html, $url, $csrfToken);
     }

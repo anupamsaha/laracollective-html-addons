@@ -23,7 +23,7 @@ class HtmlServiceProvider extends BaseHtmlServiceProvider
         // Publish configuration files
         $this->publishes(
             [
-            __DIR__ . '/../config/htmlprotector.php' => config_path('htmlprotector.php')
+            __DIR__ . '/../config/htmladdons.php' => config_path('htmladdons.php')
             ], 'config'
         );
     }

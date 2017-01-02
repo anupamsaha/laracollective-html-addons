@@ -1,10 +1,10 @@
 <?php
 
-namespace AnupamSaha\LaravelExtra\Html\Http\Middleware;
+namespace CollectiveAddons\Html\Http\Middleware;
 
 use Closure;
 use Exception;
-use AnupamSaha\LaravelExtra\Html\FormFacade as Form;
+use CollectiveAddons\Html\FormFacade as Form;
 
 class RequestProtector
 {

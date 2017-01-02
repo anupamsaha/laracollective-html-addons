@@ -1,6 +1,6 @@
 <?php
 
-namespace AnupamSaha\LaravelExtra\Html\Exceptions;
+namespace CollectiveAddons\Html\Exceptions;
 
 use Illuminate\Contracts\Encryption\EncryptException as BaseEncryptException;
 

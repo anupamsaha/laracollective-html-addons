@@ -1,16 +1,16 @@
 <?php
 
-namespace AnupamSaha\LaravelExtra\Html;
+namespace CollectiveAddons\Html;
 
 use Exception;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Collective\Html\FormBuilder as BaseFormBuilder;
-use AnupamSaha\LaravelExtra\Html\Exceptions\EncryptException;
-use AnupamSaha\LaravelExtra\Html\Exceptions\DecryptException;
-use AnupamSaha\LaravelExtra\Html\Exceptions\EncodingException;
-use AnupamSaha\LaravelExtra\Html\Exceptions\DecodingException;
+use CollectiveAddons\Html\Exceptions\EncryptException;
+use CollectiveAddons\Html\Exceptions\DecryptException;
+use CollectiveAddons\Html\Exceptions\EncodingException;
+use CollectiveAddons\Html\Exceptions\DecodingException;
 
 class FormBuilder extends BaseFormBuilder
 {
@@ -98,7 +98,7 @@ class FormBuilder extends BaseFormBuilder
      *
      * @param string $data
      * @return string
-     * @throws AnupamSaha\LaravelExtra\Html\Exceptions\EncodingException
+     * @throws CollectiveAddons\Html\Exceptions\EncodingException
      */
     protected function encode($data)
     {
@@ -118,7 +118,7 @@ class FormBuilder extends BaseFormBuilder
      *
      * @param string $data
      * @return string
-     * @throws AnupamSaha\LaravelExtra\Html\Exceptions\DecodingException
+     * @throws CollectiveAddons\Html\Exceptions\DecodingException
      */
     protected function decode($data)
     {
@@ -136,7 +136,7 @@ class FormBuilder extends BaseFormBuilder
      *
      * @param mixed $data
      * @return string
-     * @throws AnupamSaha\LaravelExtra\Html\Exceptions\EncryptException
+     * @throws CollectiveAddons\Html\Exceptions\EncryptException
      */
     protected function encrypt($data)
     {

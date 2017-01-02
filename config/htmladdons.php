@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Configuration file.
+ */
 return [
     'form_protect_key' => '__protect',
 

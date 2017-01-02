@@ -19,6 +19,5 @@
         "psr-4": {
             "AnupamSaha\\LaravelExtra\\Html": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

@@ -1,0 +1,24 @@
+{
+    "name": "anupamsaha/laracollective-html-addons",
+    "description": "Extended HTML and Form Builders for the Laravel Framework.",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/anupamsaha/laracollective-html-addons/issues",
+        "source": "https://github.com/anupamsaha/laracollective-html-addons"
+    },
+    "authors": [
+        {
+            "name": "Anupam Saha",
+            "email": "anupamsahain@gmail.com"
+        }
+    ],
+    "require": {
+        "laravelcollective/html": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "AnupamSaha\\LaravelExtra\\Html": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}

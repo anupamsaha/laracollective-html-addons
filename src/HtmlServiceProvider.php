@@ -1,6 +1,6 @@
 <?php
 
-namespace AnupamSaha\LaravelExtra\Html;
+namespace CollectiveAddons\Html;
 
 use Collective\Html\HtmlServiceProvider as BaseHtmlServiceProvider;
 
@@ -39,8 +39,8 @@ class HtmlServiceProvider extends BaseHtmlServiceProvider
 
         $this->registerFormBuilder();
 
-        $this->app->alias('html', AnupamSaha\LaravelExtra\Html\HtmlBuilder::class);
-        $this->app->alias('form', AnupamSaha\LaravelExtra\Html\FormBuilder::class);
+        $this->app->alias('html', CollectiveAddons\Html\HtmlBuilder::class);
+        $this->app->alias('form', CollectiveAddons\Html\FormBuilder::class);
     }
 
     /**
@@ -76,6 +76,6 @@ class HtmlServiceProvider extends BaseHtmlServiceProvider
      */
     public function provides()
     {
-        return ['html', 'form', AnupamSaha\LaravelExtra\Html\HtmlBuilder::class, AnupamSaha\LaravelExtra\Html\FormBuilder::class];
+        return ['html', 'form', CollectiveAddons\Html\HtmlBuilder::class, CollectiveAddons\Html\FormBuilder::class];
     }
 }

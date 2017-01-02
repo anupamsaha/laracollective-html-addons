@@ -1,6 +1,6 @@
 <?php
 
-namespace AnupamSaha\LaravelExtra\Html;
+namespace CollectiveAddons\Html;
 
 use Illuminate\Support\Facades\Facade;
 

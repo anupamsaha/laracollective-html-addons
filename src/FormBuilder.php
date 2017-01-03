@@ -262,10 +262,11 @@ class FormBuilder extends BaseFormBuilder
 
         if (is_array($list) && count($list) > 0) {
             $protected = $this->hidden(
-                    $this->hiddenProtector, $this->encrypt([
+                $this->hiddenProtector,
+                $this->encrypt([
                         $this->pkey() => $list
                     ])
-                ) . PHP_EOL;
+            ) . PHP_EOL;
         }
 
         return $protected;
@@ -291,11 +292,10 @@ class FormBuilder extends BaseFormBuilder
         // added id in hidden
         $options = [];
         if (!isset($options['id'])) {
-          $options['id'] = $name;
+            $options['id'] = $name;
         }
 
-
-        foreach($value as $key => $val) {
+        foreach ($value as $key => $val) {
             if (! is_null($val)) {
                 $field .= $this->hidden($name.($count > 1 ? "[$key]" : ''), $val, $options);
             }

@@ -13,7 +13,9 @@
         }
     ],
     "require": {
-        "laravelcollective/html": "5.1.*"
+        "laravelcollective/html": "5.1.*",
+        "illuminate/config": "5.1.*",
+        "illuminate/encryption": "5.1.*"
     },
     "require-dev": {
         "mockery/mockery": "~0.9",

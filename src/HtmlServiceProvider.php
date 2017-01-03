@@ -2,8 +2,6 @@
 
 namespace CollectiveAddons\Html;
 
-use CollectiveAddons\Html\HtmlBuilder;
-use CollectiveAddons\Html\FormBuilder;
 use Collective\Html\HtmlServiceProvider as BaseHtmlServiceProvider;
 
 class HtmlServiceProvider extends BaseHtmlServiceProvider
@@ -42,8 +40,8 @@ class HtmlServiceProvider extends BaseHtmlServiceProvider
 
         $this->registerFormBuilder();
 
-        $this->app->alias('html', HtmlBuilder::class);
-        $this->app->alias('form', FormBuilder::class);
+        $this->app->alias('html', 'CollectiveAddons\Html\HtmlBuilder');
+        $this->app->alias('form', 'CollectiveAddons\Html\FormBuilder');
     }
 
     /**
@@ -79,6 +77,6 @@ class HtmlServiceProvider extends BaseHtmlServiceProvider
      */
     public function provides()
     {
-        return ['html', 'form', HtmlBuilder::class, FormBuilder::class];
+        return ['html', 'form', 'CollectiveAddons\Html\HtmlBuilder', 'CollectiveAddons\Html\FormBuilder'];
     }
 }

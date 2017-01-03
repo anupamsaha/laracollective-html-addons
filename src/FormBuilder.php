@@ -5,6 +5,7 @@ namespace CollectiveAddons\Html;
 use Exception;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Config;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Collective\Html\FormBuilder as BaseFormBuilder;
 use CollectiveAddons\Html\Exceptions\EncryptException;
@@ -69,18 +70,19 @@ class FormBuilder extends BaseFormBuilder
      *
      * @param  \Collective\Html\HtmlBuilder                 $html
      * @param  \Illuminate\Contracts\Routing\UrlGenerator   $url
+     * @param  \Illuminate\Contracts\View\Factory           $view
      * @param  string                                       $csrfToken
      *
      * @return void
      */
-    public function __construct(HtmlBuilder $html, UrlGenerator $url, $csrfToken)
+    public function __construct(HtmlBuilder $html, UrlGenerator $url, Factory $view, $csrfToken)
     {
         $this->formProtectKey = Config::get('htmladdons.form_protect_key', '__protect');
         $this->hiddenProtector = Config::get('htmladdons.hidden_protector', '__data');
         $this->segmentKey = Config::get('htmladdons.segment_key', 'segements');
         $this->tsKey = Config::get('htmladdons.timestamp_key', '__tx');
 
-        parent::__construct($html, $url, $csrfToken);
+        parent::__construct($html, $url, $view, $csrfToken);
     }
 
     /**
